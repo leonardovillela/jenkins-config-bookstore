@@ -16,7 +16,7 @@ node {
             sh './gradlew test'
             
         stage 'Deploy in prod'
-            sh './gradlew deploy'
+            sh './gradlew deploy &'
             
         slackSend(color: 'good', message: "Deploy has finished - ${env.JOB_NAME} ${env.BUILD_NUMBER}")
     } catch(err) {
