@@ -12,7 +12,7 @@ node {
         stage 'Build Back-end'
             sh './gradlew clean build -x test'
             
-        stage 'Unit Test'
+        stage 'Test'
             sh './gradlew test'
             
         stage 'Deploy in prod'
